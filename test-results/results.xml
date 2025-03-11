@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="6" failures="0" errors="0" time="7.077">
+  <testsuite name="POST /api/login" errors="0" failures="0" skipped="0" timestamp="2025-03-11T15:50:47" time="6.806" tests="6">
+    <testcase classname="POST /api/login should login the user " name="POST /api/login should login the user " time="0.936">
+    </testcase>
+    <testcase classname="POST /register should register a user with valid data" name="POST /register should register a user with valid data" time="0.484">
+    </testcase>
+    <testcase classname="POST /eventRegistration(individual) should register user with valid data and return 200" name="POST /eventRegistration(individual) should register user with valid data and return 200" time="0.441">
+    </testcase>
+    <testcase classname="POST /corporateRegistration should register a user with valid data" name="POST /corporateRegistration should register a user with valid data" time="0.527">
+    </testcase>
+    <testcase classname="POST /sponsorRegistration should register a sponsor with valid data" name="POST /sponsorRegistration should register a sponsor with valid data" time="0.393">
+    </testcase>
+    <testcase classname="POST /speakerRegistration should register a speaker with valid data" name="POST /speakerRegistration should register a speaker with valid data" time="0.415">
+    </testcase>
+  </testsuite>
+</testsuites>

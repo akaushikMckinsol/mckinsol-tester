@@ -1,0 +1,84 @@
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build Outputs
+dist/
+build/
+.cache/
+
+# Test Coverage Files
+coverage/
+*.lcov
+
+# Editor-specific files
+.vscode/
+.idea/
+*.swp
+
+# TypeScript build files
+*.tsbuildinfo
+
+# npm package lock files
+package-lock.json
+yarn.lock
+
+# Jest cache
+.jest/
+*.cache/
+
+# Misc
+*.bak
+*.tmp
+*.log
+
+# Ignore compiled output
+*.class
+*.exe
+*.dll
+*.o
+*.pyc
+*.pyo
+*.pdb
+
+# Ignore public/uploads or similar files
+public/uploads/
+uploads/
+out/
+
+# Ignore Docker files
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+# Ignore Next.js build
+.next/
+out/
+
+# Ignore Git conflicts
+*~HEAD
+*~MERGE
+
+# Ignore IntelliJ IDEA project files
+.idea/
+
+# Ignore MacOS system files
+.DS_Store
+._*
