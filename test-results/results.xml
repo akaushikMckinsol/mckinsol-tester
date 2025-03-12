@@ -1,17 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="6" failures="0" errors="0" time="7.077">
-  <testsuite name="POST /api/login" errors="0" failures="0" skipped="0" timestamp="2025-03-11T15:50:47" time="6.806" tests="6">
-    <testcase classname="POST /api/login should login the user " name="POST /api/login should login the user " time="0.936">
+<testsuites name="jest tests" tests="28" failures="10" errors="0" time="13.298">
+  <testsuite name="POST /login" errors="0" failures="10" skipped="0" timestamp="2025-03-12T14:40:02" time="12.94" tests="28">
+    <testcase classname="POST /login should login the user with valid credentials" name="POST /login should login the user with valid credentials" time="0.505">
     </testcase>
-    <testcase classname="POST /register should register a user with valid data" name="POST /register should register a user with valid data" time="0.484">
+    <testcase classname="POST /login should login the user with trimmed email and password" name="POST /login should login the user with trimmed email and password" time="0.438">
     </testcase>
-    <testcase classname="POST /eventRegistration(individual) should register user with valid data and return 200" name="POST /eventRegistration(individual) should register user with valid data and return 200" time="0.441">
+    <testcase classname="POST /login should allow login with case-insensitive email" name="POST /login should allow login with case-insensitive email" time="0.401">
     </testcase>
-    <testcase classname="POST /corporateRegistration should register a user with valid data" name="POST /corporateRegistration should register a user with valid data" time="0.527">
+    <testcase classname="POST /login should return 400 for invalid email format" name="POST /login should return 400 for invalid email format" time="2.142">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 400
+Received: 200
+    at C:\Users\Aniket\api-auto-mck\specs\the-meet.spec.ts:50:29
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (C:\Users\Aniket\api-auto-mck\specs\the-meet.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</failure>
     </testcase>
-    <testcase classname="POST /sponsorRegistration should register a sponsor with valid data" name="POST /sponsorRegistration should register a sponsor with valid data" time="0.393">
+    <testcase classname="POST /login should return 401 for incorrect password" name="POST /login should return 401 for incorrect password" time="0.407">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 401
+Received: 200
+    at C:\Users\Aniket\api-auto-mck\specs\the-meet.spec.ts:65:29
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (C:\Users\Aniket\api-auto-mck\specs\the-meet.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</failure>
     </testcase>
-    <testcase classname="POST /speakerRegistration should register a speaker with valid data" name="POST /speakerRegistration should register a speaker with valid data" time="0.415">
+    <testcase classname="POST /login should return 404 for non-existing email" name="POST /login should return 404 for non-existing email" time="0.505">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 404
+Received: 200
+    at C:\Users\Aniket\api-auto-mck\specs\the-meet.spec.ts:80:29
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (C:\Users\Aniket\api-auto-mck\specs\the-meet.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</failure>
+    </testcase>
+    <testcase classname="POST /login should return 400 for missing email" name="POST /login should return 400 for missing email" time="0.416">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 400
+Received: 200
+    at C:\Users\Aniket\api-auto-mck\specs\the-meet.spec.ts:94:29
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (C:\Users\Aniket\api-auto-mck\specs\the-meet.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</failure>
+    </testcase>
+    <testcase classname="POST /register should register a user with valid data" name="POST /register should register a user with valid data" time="0.428">
+    </testcase>
+    <testcase classname="POST /eventRegistration(individual) should register user with valid data and return 200" name="POST /eventRegistration(individual) should register user with valid data and return 200" time="0.36">
+    </testcase>
+    <testcase classname="POST /corporateRegistration should register a user with valid data" name="POST /corporateRegistration should register a user with valid data" time="0.377">
+    </testcase>
+    <testcase classname="POST /sponsorRegistration should register a sponsor with valid data" name="POST /sponsorRegistration should register a sponsor with valid data" time="0.402">
+    </testcase>
+    <testcase classname="POST /speakerRegistration should register a speaker with valid data" name="POST /speakerRegistration should register a speaker with valid data" time="0.409">
+    </testcase>
+    <testcase classname="GET /eventNames should return 200 and list of events" name="GET /eventNames should return 200 and list of events" time="0.252">
+    </testcase>
+    <testcase classname="GET /eventNames should return events with correct fields" name="GET /eventNames should return events with correct fields" time="0.254">
+    </testcase>
+    <testcase classname="GET /eventNames should return valid data types" name="GET /eventNames should return valid data types" time="0.269">
+    </testcase>
+    <testcase classname="GET /eventNames should return an empty array if no events are available" name="GET /eventNames should return an empty array if no events are available" time="0.258">
+    </testcase>
+    <testcase classname="GET /readSubscribers should return 200 and list of subscribers" name="GET /readSubscribers should return 200 and list of subscribers" time="0.244">
+    </testcase>
+    <testcase classname="GET /readSubscribers should return subscribers with correct fields and types" name="GET /readSubscribers should return subscribers with correct fields and types" time="0.259">
+    </testcase>
+    <testcase classname="GET /readSubscribers should return an empty array if no subscribers are found" name="GET /readSubscribers should return an empty array if no subscribers are found" time="0.266">
+    </testcase>
+    <testcase classname="GET /readSubscribers should return 500 if server error occurs" name="GET /readSubscribers should return 500 if server error occurs" time="0.264">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 500
+Received: 200
+    at C:\Users\Aniket\api-auto-mck\specs\the-meet.spec.ts:629:29
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (C:\Users\Aniket\api-auto-mck\specs\the-meet.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</failure>
+    </testcase>
+    <testcase classname="GET /readSubscribers should return 404 for an invalid endpoint" name="GET /readSubscribers should return 404 for an invalid endpoint" time="0.243">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 404
+Received: 200
+    at C:\Users\Aniket\api-auto-mck\specs\the-meet.spec.ts:640:29
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (C:\Users\Aniket\api-auto-mck\specs\the-meet.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</failure>
+    </testcase>
+    <testcase classname="GET /registrationsTypeBased should return 200 and list of registration types and counts" name="GET /registrationsTypeBased should return 200 and list of registration types and counts" time="0.24">
+    </testcase>
+    <testcase classname="GET /registrationsTypeBased should return registration types with correct fields and types" name="GET /registrationsTypeBased should return registration types with correct fields and types" time="0.259">
+    </testcase>
+    <testcase classname="GET /registrationsTypeBased should return an empty array if no registration types are found" name="GET /registrationsTypeBased should return an empty array if no registration types are found" time="0.247">
+    </testcase>
+    <testcase classname="GET /registrationsTypeBased should return 500 if server error occurs" name="GET /registrationsTypeBased should return 500 if server error occurs" time="0.266">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 500
+Received: 200
+    at C:\Users\Aniket\api-auto-mck\specs\the-meet.spec.ts:709:29
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (C:\Users\Aniket\api-auto-mck\specs\the-meet.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</failure>
+    </testcase>
+    <testcase classname="GET /registrationsTypeBased should return 404 for an invalid endpoint" name="GET /registrationsTypeBased should return 404 for an invalid endpoint" time="0.244">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 404
+Received: 200
+    at C:\Users\Aniket\api-auto-mck\specs\the-meet.spec.ts:720:29
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (C:\Users\Aniket\api-auto-mck\specs\the-meet.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</failure>
+    </testcase>
+    <testcase classname="GET /registrationsTypeBased should return more than 0 registration types" name="GET /registrationsTypeBased should return more than 0 registration types" time="0.29">
+      <failure>Error: expect(received).toBeGreaterThan(expected)
+
+Matcher error: received value must be a number or bigint
+
+Received has value: undefined
+    at C:\Users\Aniket\api-auto-mck\specs\the-meet.spec.ts:726:34
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (C:\Users\Aniket\api-auto-mck\specs\the-meet.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</failure>
+    </testcase>
+    <testcase classname="GET /registrationsTypeBased should return 404 for invalid HTTP method" name="GET /registrationsTypeBased should return 404 for invalid HTTP method" time="0.402">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 404
+Received: 200
+    at C:\Users\Aniket\api-auto-mck\specs\the-meet.spec.ts:732:29
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (C:\Users\Aniket\api-auto-mck\specs\the-meet.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</failure>
     </testcase>
   </testsuite>
 </testsuites>
